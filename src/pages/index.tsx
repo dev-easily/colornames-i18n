@@ -7,6 +7,7 @@ import Translate, { translate } from '@docusaurus/Translate';
 
 
 import styles from './index.module.css';
+import { SimpleTable } from './SimplePage';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -39,7 +40,7 @@ export default function Home(): JSX.Element {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
-        this is main
+        <SimpleTable />
       </main>
     </Layout>
   );
