@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "Dev Easily",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "the qube",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.使用指南": {
+    "message": "使用指南",
+    "description": "Navbar item with label 使用指南"
+  },
+  "item.label.新闻": {
+    "message": "新闻",
+    "description": "Navbar item with label 新闻"
+  },
+  "item.label.产品": {
+    "message": "产品",
+    "description": "Navbar item with label 产品"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.MacToys（PowerToys for macOS）": {
+    "message": "MacToys（PowerToys for macOS）",
+    "description": "Navbar item with label MacToys（PowerToys for macOS）"
+  }
+}
