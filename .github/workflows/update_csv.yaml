@@ -1,6 +1,7 @@
 name: update csv(TODO)
 on: 
-
+  workflow_dispatch:
+  
 jobs:
   publish:
     name: publish to dist
