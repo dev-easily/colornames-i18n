@@ -73,10 +73,10 @@ export default function SimpleTable(): JSX.Element {
       footer: info => info.column.id,
     }),
     {
-      id: "Demo",
+      id: "Color",
       accessorFn: r => r.hex,
       cell: props => <div style={{ backgroundColor: props.getValue(), width: "200px" }}>&nbsp;</div>,
-      footer: "Demo"
+      footer: "Color"
     }
   ]
 

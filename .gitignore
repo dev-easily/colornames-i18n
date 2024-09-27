@@ -4,3 +4,4 @@ build
 .idea
 .DS_Store
 static/colornames.i18n.html
+docs/memo.mdx
