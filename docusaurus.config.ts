@@ -107,7 +107,7 @@ const config: Config = {
     announcementBar: {
      id: 'support_us',
      content:
-       'Color names with your locale needs your support, <a target="_blank" rel="noopener noreferrer" href="#">translate color names within 2 minutes now~</a>',
+       'Color names with your locale needs your support, <a target="_blank" rel="noopener noreferrer" href="/colornames-i18n/docs/intro">translate color names within 2 minutes now~</a>',
      backgroundColor: '#fafbfc',
      textColor: '#091E42',
      isCloseable: true,
