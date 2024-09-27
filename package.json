@@ -12,7 +12,9 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "csv-dist": "cd rust && cargo run -- -s csv/colornames.bestof.csv",
+    "csv-update": "cd rust && cargo run -- -u -s csv/colornames.bestof.csv"
   },
   "dependencies": {
     "@docusaurus/core": "3.5.2",

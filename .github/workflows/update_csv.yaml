@@ -1,0 +1,11 @@
+name: update csv(TODO)
+on: 
+
+jobs:
+  publish:
+    name: publish to dist
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo test --all-features

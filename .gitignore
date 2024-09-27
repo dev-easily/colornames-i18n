@@ -2,3 +2,5 @@ node_modules
 .docusaurus
 build
 .idea
+.DS_Store
+static/colornames.i18n.html

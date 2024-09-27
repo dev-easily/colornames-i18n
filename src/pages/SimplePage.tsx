@@ -1,6 +1,8 @@
 import { useState, useReducer } from "react";
 import Badge from '@mui/material/Badge';
 import Tooltip from '@mui/material/Tooltip';
+import Link from '@docusaurus/Link';
+import Translate, { translate } from '@docusaurus/Translate';
 import "./SimplePage.css";
 
 import colors, { Color } from "@site/src/data/colors";
@@ -87,6 +89,14 @@ export default function SimpleTable(): JSX.Element {
 
   return (
     <div className="colors-table">
+
+      <Link
+        className="button button--secondary button--sm"
+        to="/min">
+        <Translate description="The homepage main heading">
+          Click to see a minimal untranslated version
+        </Translate>
+      </Link>
       <table>
         <thead>
           {table.getHeaderGroups().map(headerGroup => (

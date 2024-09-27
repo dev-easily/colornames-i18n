@@ -16,4 +16,7 @@ jobs:
     - run: npm i
     - run: git config --global user.name "actionbot"
     - run: git config --global user.email "actionbot@github.com"
+    - run: npm run csv-dist
+    - run: ls rust/target && cp rust/target/colornames.i18n.js src/data/colornames.i18n.js && ls -al src/data/ && echo "done updating src/data/color.ts"
+    - run: cp rust/target/colornames.i18n.html static/colornames.i18n.html && echo "done updating static/colornames.i18n.html"
     - run: GIT_USER=travisbikkle GIT_PASS=${{ secrets.GITHUB_TOKEN }} npm run deploy
