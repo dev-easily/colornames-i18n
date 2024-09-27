@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[681],{9940:(e,s,t)=>{t.r(s),t.d(s,{default:()=>n});var u=t(4848);function n(){return(0,u.jsx)("h1",{children:"test"})}}}]);

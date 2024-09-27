@@ -4,7 +4,7 @@
         <title>Color Names Blog</title>
         <link>https://dev-easily.github.io/colornames-i18n/zh-Hans/blog</link>
         <description>Color Names Blog</description>
-        <lastBuildDate>Fri, 27 Sep 2024 04:42:06 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 27 Sep 2024 13:12:16 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-Hans</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[index]]></title>
             <link>https://dev-easily.github.io/colornames-i18n/zh-Hans/blog/index</link>
             <guid>https://dev-easily.github.io/colornames-i18n/zh-Hans/blog/index</guid>
-            <pubDate>Fri, 27 Sep 2024 04:42:06 GMT</pubDate>
+            <pubDate>Fri, 27 Sep 2024 13:12:16 GMT</pubDate>
         </item>
     </channel>
 </rss>
