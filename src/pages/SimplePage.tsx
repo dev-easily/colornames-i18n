@@ -13,18 +13,17 @@ import {
 
 const columnHelper = createColumnHelper<Color>()
 
-export function SimpleTable(): JSX.Element {
+export default function SimpleTable(): JSX.Element {
   const [data, _setData] = useState(() => [...colors.data])
   const rerender = useReducer(() => ({}), {})[1]
   const [locale, setLocale] = useState("zh-hans")
-
   const columns = [
     {
       id: "Color Name(en)",
       accessorFn: r => r.names["en"][0],
       cell: props => {
         return (
-          <div style={{width: "100%"}} onClick={(e) => {
+          <div style={{ width: "100%" }} onClick={(e) => {
             window.open("https://www.deepl.com/en/translator#en/" + locale + "/" + encodeURI(props.getValue()))
           }}>
             <span>{props.getValue()}</span>
