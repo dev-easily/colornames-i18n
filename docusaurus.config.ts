@@ -3,20 +3,20 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Dev Easily',
-  tagline: '有趣，有用',
+  title: 'Color Names',
+  tagline: 'For Everyone',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://dev-easily.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/website',
+  baseUrl: '/colornames-i18n',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'dev-easily', // Usually your GitHub org/user name.
-  projectName: 'website', // Usually your repo name.
+  projectName: 'colornames-i18n', // Usually your repo name.
   deploymentBranch: 'gh-page',
   trailingSlash: false,
 
@@ -27,7 +27,7 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'zh-Hans',
+    defaultLocale: 'en',
     locales: ['zh-Hans', 'en'],
   },
 
@@ -39,7 +39,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/dev-easily/website/blob/main/',
+            'https://github.com/dev-easily/colornames-i18n/blob/main/',
         },
         blog: {
           blogTitle: 'Blog!',
@@ -61,7 +61,7 @@ const config: Config = {
           blogSidebarCount: 'ALL',
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/dev-easily/website/blob/main/',
+            'https://github.com/dev-easily/colornames-i18n/blob/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -104,16 +104,16 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
-    //announcementBar: {
-    //  id: 'support_us',
-    //  content:
-    //    'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
-    //  backgroundColor: '#fafbfc',
-    //  textColor: '#091E42',
-    //  isCloseable: true,
-    //},
+    announcementBar: {
+     id: 'support_us',
+     content:
+       'Color names with your locale needs your support, <a target="_blank" rel="noopener noreferrer" href="#">translate color names within 2 minutes now~</a>',
+     backgroundColor: '#fafbfc',
+     textColor: '#091E42',
+     isCloseable: true,
+    },
     navbar: {
-      title: 'Dev Easily',
+      title: 'Color Names i18n',
       hideOnScroll: true,
       // style: 'dark',
       logo: {
@@ -132,12 +132,12 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: '使用指南',
+          label: 'Docs',
         },
-        {to: '/blog', label: '新闻', position: 'left'},
+        // {to: '/blog', label: 'News', position: 'left'},
         {
           type: 'dropdown',
-          label: '产品',
+          label: 'Products',
           position: 'left',
           items: [
             {
@@ -147,7 +147,7 @@ const config: Config = {
           ],
         },
         {
-          href: 'https://github.com/dev-easily/website/',
+          href: 'https://github.com/dev-easily/colornames-i18n/',
           label: 'GitHub',
           position: 'right',
         },
