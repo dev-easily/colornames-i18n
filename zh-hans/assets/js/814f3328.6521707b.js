@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"index","permalink":"/colornames-i18n/zh-hans/blog/index","unlisted":false,"date":"2024-09-30T09:11:53.000Z"}]}')}}]);
