@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@docusaurus/core": "3.5.2",
+    "@docusaurus/plugin-google-gtag": "^3.5.2",
     "@docusaurus/plugin-ideal-image": "^3.5.2",
     "@docusaurus/preset-classic": "3.5.2",
     "@docusaurus/theme-common": "^3.5.2",
@@ -30,6 +31,7 @@
     "@mui/styled-engine-sc": "^6.1.1",
     "@tanstack/react-table": "^8.20.5",
     "clsx": "^2.0.0",
+    "docusaurus-plugin-clarity": "^2.1.0",
     "docusaurus-plugin-sass": "^0.2.5",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",

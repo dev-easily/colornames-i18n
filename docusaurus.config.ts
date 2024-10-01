@@ -71,6 +71,10 @@ const config: Config = {
           // https://docusaurus.io/zh-CN/docs/styling-layout
           customCss: './src/css/custom.css',
         },
+        gtag: {
+          trackingID : 'G-PN6XFFRXTS',
+          anonymizeIP: true,
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -177,10 +181,14 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    clarity: {
+      ID: "obk4dt9tlu"
+    }
   } satisfies Preset.ThemeConfig,
 
   plugins: [
     'docusaurus-plugin-sass',
+    'docusaurus-plugin-clarity',
     [
       '@docusaurus/plugin-ideal-image',
       {
