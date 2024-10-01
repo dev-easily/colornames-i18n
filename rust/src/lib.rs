@@ -13,6 +13,7 @@ mod types;
 mod file;
 mod javascript;
 mod html;
+mod json_separated;
 
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
@@ -47,6 +48,7 @@ pub enum Supported {
     Origin,
     Html,
     Js,
+    JsonSeparated,
 }
 
 pub fn run(path: &Path, p1: Vec<Supported>) {
@@ -62,6 +64,9 @@ pub fn run(path: &Path, p1: Vec<Supported>) {
             Js => {
                 _ = javascript::generate(path);
             },
+            JsonSeparated => {
+                _ = json_separated::generate(path);
+            }
         }
     }
 }
@@ -99,7 +104,7 @@ pub fn update(origin: &Path, i18n: &Path) -> anyhow::Result<()> {
             writeln!(updated_file, "{}", line);
         } else {
             // new color
-            writeln!(updated_file, "{},{}", color.en_name, hex);
+            writeln!(updated_file, "{},{}", color.name, hex);
         }
     }
     println!("done, check target/*.updated.csv and rename it to colornames.i18n.csv before commit.");

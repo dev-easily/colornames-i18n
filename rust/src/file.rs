@@ -59,8 +59,8 @@ pub fn read_color_names_from_origin_csv(source: &Path) -> Vec<OriginColor> {
             let split = x.split(",").collect::<Vec<&str>>();
             (String::from(split[0]), String::from(split[1]))
         })
-        .map(|(en_name, hex)| OriginColor {
-            en_name,
+        .map(|(name, hex)| OriginColor {
+            name,
             hex
         }).collect()
 }

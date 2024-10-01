@@ -2,8 +2,9 @@ use colors_transform::{Color, Rgb};
 use std::collections::HashMap;
 use serde::{Serialize, Deserialize};
 
+#[derive(Serialize, Deserialize, Debug)]
 pub struct OriginColor {
-    pub en_name: String,
+    pub name: String,
     pub hex: String,
 }
 
@@ -15,6 +16,7 @@ pub struct I18nColor {
     // #[serde_as(as = "Vec<(_, _)>")]
     pub names: HashMap<String, Vec<String>>
 }
+
 impl From<OriginColor> for I18nColor {
     fn from(value: OriginColor) -> Self {
         let rgb = Rgb::from_hex_str(&value.hex[1..]).unwrap();
@@ -28,10 +30,11 @@ impl From<OriginColor> for I18nColor {
     }
 }
 
+
 impl I18nColor {
-    pub fn new(en_name: String, hex: String) -> Self {
+    pub fn new(name: String, hex: String) -> Self {
         Self::from(OriginColor {
-            en_name,
+            name,
             hex
         })
     }
@@ -42,6 +45,20 @@ impl I18nColor {
             rgb: self.rgb,
             hsl: self.hsl,
             names,
+        }
+    }
+
+    pub fn to_simple(&self, locale: &String) -> OriginColor {
+        if let Some(v) = self.names.get(locale) {
+            OriginColor {
+                name: v[0].clone(),
+                hex: self.hex.clone(),
+            }
+        } else {
+            OriginColor {
+                name: self.names.get("en").unwrap()[0].clone(),
+                hex: self.hex.clone(),
+            }
         }
     }
 }

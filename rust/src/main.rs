@@ -17,7 +17,7 @@ fn main() {
 
     use lib::Supported::*;
     let target = vec![
-        Html, Js
+        Html, Js, JsonSeparated
     ];
     lib::run(translated_file, target);
 }

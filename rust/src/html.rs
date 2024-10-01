@@ -51,7 +51,7 @@ pub fn generate(path: &Path) -> anyhow::Result<()> {
     read_color_names_from_origin_csv(path)
         .iter()
         .for_each(|color| {
-            let name = color.en_name.clone();
+            let name = color.name.clone();
             let hex = color.hex.clone();
             let rgb = Rgb::from_hex_str(&hex[1..]).expect("failed to convert to rgb value");
             let hsl = rgb.to_hsl();
