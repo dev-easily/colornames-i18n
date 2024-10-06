@@ -1,14 +1,14 @@
 use std::io::Write;
 use std::path::Path;
 
-use crate::file::*;
+use crate::colors::file::*;
 pub fn generate(path: &Path) -> anyhow::Result<()> {
     let mut file = init_target_file(path, "js")?;
     let header = read_csv_headers_from_i18n_csv(path);
     let heads = header.split(",").map(|x| x.trim()).collect::<Vec<&str>>();
 
     writeln!(file, r#"export const headers = "#).expect("TODO: panic message");
-    writeln!(file, "{}", serde_json::to_string(&heads)?);
+    writeln!(file, "{}", serde_json::to_string(&heads)?).expect("TODO: panic message");
 
     writeln!(file, r#"export const data = "#).expect("TODO: panic message");
 

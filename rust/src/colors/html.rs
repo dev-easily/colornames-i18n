@@ -2,7 +2,7 @@ use colors_transform::{Color, Rgb};
 use std::path::Path;
 use std::io::Write;
 
-use crate::file::*;
+use crate::colors::file::*;
 
 pub fn generate(path: &Path) -> anyhow::Result<()> {
     let mut file = init_target_file(path, "html")?;

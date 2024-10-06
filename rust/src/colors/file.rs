@@ -3,7 +3,7 @@ use std::fs::{File, OpenOptions};
 use std::io::{BufRead, BufReader};
 use std::path::Path;
 
-use crate::types::*;
+use crate::colors::types::*;
 
 pub fn read_csv_headers_from_i18n_csv(source: &Path) -> String {
     let source = File::open(source).expect("file not readable");
@@ -67,7 +67,7 @@ pub fn read_color_names_from_origin_csv(source: &Path) -> Vec<OriginColor> {
 
 #[test]
 fn test_i18n_read() {
-    let colors = read_color_names_from_i18n_csv(Path::new("i18n/colornames.i18n.csv"));
+    let colors = read_color_names_from_i18n_csv(Path::new("../sources/colornames.i18n.csv"));
     println!("colors.count: {}", colors.len());
     //println!("{:?}", colors);
     assert_eq!("时速100迈", colors[0].names["zh-hans"][0]);

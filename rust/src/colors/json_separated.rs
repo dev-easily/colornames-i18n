@@ -1,8 +1,8 @@
 use std::io::Write;
 use std::path::Path;
 
-use crate::file::*;
-use crate::types::*;
+use crate::colors::file::*;
+use crate::colors::types::*;
 
 pub fn generate(path: &Path) -> anyhow::Result<()> {
     let header = read_csv_headers_from_i18n_csv(path);
@@ -18,7 +18,7 @@ pub fn generate(path: &Path) -> anyhow::Result<()> {
         let simple_colors: Vec<OriginColor> = colors.iter().map(|c| c.to_simple(&String::from(locale))).collect();
         let serialized = serde_json::to_string(&simple_colors).unwrap();
         write!(file, "{}", serialized).expect("TODO: panic message");
-        writeln!(file, "}}");
+        writeln!(file, "}}").expect("TODO: panic message");
     }
 
     Ok(())

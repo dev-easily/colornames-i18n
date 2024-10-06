@@ -1,7 +1,6 @@
 use clap::Parser;
-use lib::Args;
 use std::path::Path;
-
+use lib::colors::*;
 fn main() {
     let args = Args::parse();
 
@@ -11,13 +10,13 @@ fn main() {
     if args.update {
         let original_file = Path::new(&args.source);
         assert!(original_file.exists(), "{} not exists", args.source);
-        _= lib::update(original_file, translated_file);
+        _= update(original_file, translated_file);
         return;
     }
 
-    use lib::Supported::*;
+    use Supported::*;
     let target = vec![
         Html, Js, JsonSeparated
     ];
-    lib::run(translated_file, target);
+    run(translated_file, target);
 }
