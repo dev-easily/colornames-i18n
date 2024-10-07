@@ -520,7 +520,7 @@ parent,slug,emoji,en,zh-hans
 1,couple_with_heart_woman_man,👩‍❤️‍👨,"couple with heart woman, man",有心情侣 女人，男人
 1,couple_with_heart_man_man,👨‍❤️‍👨,"couple with heart man, man",有心情侣，男，男
 1,couple_with_heart_woman_woman,👩‍❤️‍👩,"couple with heart woman, woman",心心相印的情侣 女人、女人
-1,family_man_woman_boy,👨‍👩‍👦,"family man, woman, boy",家庭 男人、女人、男孩
+1,family_man_woman_boy,👨‍👩‍👦,"family man, woman, boy",家庭男人、女人、男孩
 1,family_man_woman_girl,👨‍👩‍👧,"family man, woman, girl",家庭男女、女孩
 1,family_man_woman_girl_boy,👨‍👩‍👧‍👦,"family man, woman, girl, boy",家庭男女、女孩、男孩
 1,family_man_woman_boy_boy,👨‍👩‍👦‍👦,"family man, woman, boy, boy",家庭中的男人、女人、男孩、男孩
@@ -550,10 +550,10 @@ parent,slug,emoji,en,zh-hans
 1,busts_in_silhouette,👥,busts in silhouette,半身剪影
 1,people_hugging,🫂,people hugging,拥抱的人们
 1,family,👪,family,家庭
-1,family_adult_adult_child,🧑‍🧑‍🧒,"family adult, adult, child",家庭 成人、成人、儿童
+1,family_adult_adult_child,🧑‍🧑‍🧒,"family adult, adult, child",家庭成人、成人、儿童
 1,family_adult_adult_child_child,🧑‍🧑‍🧒‍🧒,"family adult, adult, child, child",家庭成人、成人、儿童、儿童
 1,family_adult_child,🧑‍🧒,"family adult, child",家庭成人、儿童
-1,family_adult_child_child,🧑‍🧒‍🧒,"family adult, child, child",家庭 成人、儿童、儿童
+1,family_adult_child_child,🧑‍🧒‍🧒,"family adult, child, child",家庭成人、儿童、儿童
 1,footprints,👣,footprints,脚印
 1,fingerprint,🫆,fingerprint,指纹
 2,animals_nature,,Animals & Nature,动物与自然

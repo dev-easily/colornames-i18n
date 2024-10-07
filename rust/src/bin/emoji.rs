@@ -160,7 +160,7 @@ fn minimize(locales: &Vec<String>, data: &Vec<I18nEmojiGroup>) -> Result<Result<
             x.to(locale)
         }).collect();
 
-        let mini = serde_json::to_string_pretty(&data).unwrap();
+        let mini = serde_json::to_string(&data).unwrap();
         let target_name = Path::new("target").join(format!("emojis.i18n.{}.json", locale));
         let mut file = OpenOptions::new()
             .append(true)
@@ -189,7 +189,10 @@ struct Emoji {
     #[serde(skip_serializing)]
     unicode_version: String,
     #[serde(skip_serializing)]
-    emoji_version: String
+    emoji_version: String,
+    /// 在输出到非英语语言的单个json时，如果希望搜索英文也能出现字符，需要在这个json中保留英文名称
+    #[serde(default)]
+    en_name: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -208,13 +211,16 @@ impl I18nEmoji {
             emoji: self.emoji.clone(),
             skin_tone_support: false,
             emoji_version: "".to_string(),
+            en_name: "".to_string(),
         };
+        let en = self.names.get(&String::from("en")).unwrap();
         if let Some(n) = self.names.get(locale) {
             r.name = n.to_string();
         } else {
-            let en = self.names.get(&String::from("en")).unwrap();
-
             r.name = en.clone();
+        }
+        if r.name != *en {
+            r.en_name = en.clone();
         }
         r
     }
