@@ -18,15 +18,6 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            <Translate description="The homepage main heading">
-              Site under construction
-            </Translate>
-          </Link>
-        </div>
       </div>
     </header>
   );
