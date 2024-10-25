@@ -13,7 +13,7 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "color-csv-dist": "cd rust && cargo run --bin colors -- -s csv/colornames.bestof.csv",
+    "color-csv-dist": "cd rust && cargo run --bin colors",
     "color-csv-update": "cd rust && cargo run --bin colors -- -u -s csv/colornames.bestof.csv"
   },
   "dependencies": {

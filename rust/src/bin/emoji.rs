@@ -8,6 +8,7 @@ use std::path::Path;
 use csv::StringRecord;
 
 fn main() -> anyhow::Result<(), Error> {
+    // https://github.com/muan/unicode-emoji-json
     let emojis = fs::read_to_string(Path::new("sources/data-by-group.json"));
     let data = serde_json::from_str::<Vec<EmojiGroup>>(emojis.unwrap().as_str()).unwrap();
 
