@@ -145,8 +145,8 @@ const config: Config = {
           position: 'left',
           items: [
             {
-              to: '/',
-              label: 'MacToys（PowerToys for macOS）',
+              to: 'https://mactoys.eusoftbank.com/en',
+              label: 'MagicToy（PowerToys for macOS）',
             },
           ],
         },
